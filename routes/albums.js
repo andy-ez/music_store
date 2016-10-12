@@ -5,13 +5,14 @@ var path = require('path'),
 /* GET home page. */
 module.exports = function(router){
   router.get('/albums/new', function(req, res, next){
-    res.render('new');
+    res.render('new', { albums: Album.get() });
   });
 
   router.post('/albums', function(req, res){
     var album = req.body,
         albums = Album.get();
 
+    album.id = Album.getLastID();
     albums.push(album);
     Album.set(albums);
     res.json(album);

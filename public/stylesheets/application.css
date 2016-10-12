@@ -28,36 +28,37 @@ main {
   padding: 25px 40px;
   margin: 0 auto;
   background: #fff;
+  clear: both;
 }
-main ul {
+#index ul {
   padding: 0 0 40px 0;
   margin: 0 0 0 -20px;
 }
-main ul li {
+#index ul li {
   display: inline-block;
   width: 20%;
   padding: 0 0 25px 20px;
   box-sizing: border-box;
   vertical-align: top;
 }
-main ul li img {
+#index ul li img {
   width: 100%;
   display: block;
   margin: 0 0 10px 0;
 }
-main ul li h2,
-main ul li h3,
-main ul li p {
+#index ul li h2,
+#index ul li h3,
+#index ul li p {
   padding: 0 0 5px 0;
 }
-main ul li h2 {
+#index ul li h2 {
   font-size: 1.5em;
 }
-main ul li h3 {
+#index ul li h3 {
   font-size: 1.25em;
 }
-main a.button,
-main input[type="submit"] {
+#index a.button,
+#index input[type="submit"] {
   position: relative;
   display: inline-block;
   padding: 10px 25px;
@@ -75,16 +76,90 @@ main input[type="submit"] {
   transition: box-shadow 200ms ease, top 200ms ease, left 200ms ease, color 200ms ease;
   box-shadow: 2px 2px 0 2px #008a73;
 }
-main a.button:hover,
-main input[type="submit"]:hover,
-main a.button:focus,
-main input[type="submit"]:focus {
+#index a.button:hover,
+#index input[type="submit"]:hover,
+#index a.button:focus,
+#index input[type="submit"]:focus {
   color: #ffff9d;
 }
-main a.button:active,
-main input[type="submit"]:active {
+#index a.button:active,
+#index input[type="submit"]:active {
   box-shadow: 1px 1px 0 1px #008a73;
   top: 3px;
   left: 3px;
   color: #ffff9d;
+}
+header {
+  max-width: 800px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+#cart {
+  position: relative;
+  float: right;
+  width: 50%;
+  padding: 15px 0 0 0;
+  text-align: right;
+}
+#cart label {
+  display: inline-block;
+  padding: 2px 3px;
+  cursor: pointer;
+}
+#cart input {
+  display: none;
+}
+#cart input:checked + #items {
+  display: block;
+}
+#cart #items {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+  padding: 5px 10px;
+  background: #00a388;
+  color: #fff;
+}
+#cart #items li {
+  padding: 5px 0;
+  font-size: 12px;
+  text-align: left;
+}
+#cart #items small {
+  font-size: 11px;
+  float: right;
+  margin: 0 0 0 10px;
+  vertical-align: bottom;
+}
+#cart #items a {
+  float: left;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px 0 0;
+  overflow: hidden;
+  text-indent: 86570px;
+  transform: rotate(45deg);
+}
+#cart #items a:before,
+#cart #items a:after {
+  position: absolute;
+  content: "";
+  background: #b00b00;
+}
+#cart #items a:before {
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  margin-left: -1px;
+}
+#cart #items a:after {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  margin-top: -1px;
 }
